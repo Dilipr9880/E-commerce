@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    
+    <style>
+        body{
+            margin: 20px;
+        }
+        .container{
+            display: grid;
+            height: 50vh;
+            grid-template-columns: auto auto;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        h1{
+            text-align: center;
+            background-color: aliceblue;
+            margin-top: 0%;
+        }
+        .Items{
+            border: 1px solid darkgrey;
+            margin: 10px;
+        }
+        .summary{
+            border: 1px solid darkgrey;
+            margin: 10px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        #del{
+            margin-left: 45px;
+        }
+        @media screen and (max-width: 600px){
+           .container{
+            display: block;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+           }
+           img{
+            width: 100%;
+            height: auto;
+           }
+           .col{
+            width: auto;
+            height: 100%;
+           }
+           input{
+            width: 30px;
+           }
+           .summary{
+            display: block;
+            width: 100%;
+           }
+           
+           .list{
+            width: 50%;
+           }
+           #del{
+            margin-left: 0%;
+           }
+           .cols{
+            width: 100%;
+            margin: 0%;
+           }
+        }
+    </style>
+</head>
+<body>
+     <!--Javascript file-->
+    <script>
+        function increment() {
+           document.getElementById('demoInput').stepUp();
+        }
+        function decrement() {
+           document.getElementById('demoInput').stepDown();
+        }
+     </script>
+     <!--Cart page-->
+    <div class="container">
+        <div class="Items">
+            <h1>Items in Cart</h1>
+            <div class="row">
+                <div class="col">
+                    <img src="images/black hoddie.webp" alt="No img Found"/>
+                </div>
+                <div class="list">
+                    <p style="text-align: center;">Black Hoddie</p>
+                    <p style="text-align: center;">300</p>
+                    <button id="del" class="btn btn-dark"><i class='fas fa-trash-alt'></i></button>
+                </div>
+                <div class="cols">
+                    <button class="btn btn-dark" onclick="increment()">+</button>
+                    <input id=demoInput type=number min="0" readonly>
+                    <button class="btn btn-dark" onclick="decrement()">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="summary">
+            <h1>Summary</h1>
+            <p>cost <span style="margin-left: 300px;">300</span></p>
+            <p>shipping <span style="margin-left: 285px;">50</span></p>
+            <hr>
+            <p><b>Total <span style="margin-left: 296px;">350</span></b></p>
+            <button class="btn btn-dark" style="margin-left: 125px;">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

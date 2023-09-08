@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!--Css file-->
+    <style>
+        label{
+            display: block;
+            margin-top: 20px;
+            margin-right: 230px;
+        }
+        input{
+            width: 300px;
+        }
+        
+    </style>
+     <!--Javascript file-->
+    <script>
+        function login(){
+            var email=document.getElementById('email').value;
+            var pass=document.getElementById('pass').value;
+
+            if(email==="admin@admin.com" && pass==="123456"){
+                alert("Login Successful");
+            }else{
+                alert("Incorrect Email orPassword");
+            }
+        } 
+    </script>
+</head>
+<body>
+    <!--Login file-->
+    <h1 style="text-align: center;">Login</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <label for="name"><b>E-mail:</b></label>
+                <input type="email" name="Name" placeholder="Enter your E-mail" id="email"/>
+                <label for="name"><b>Password:</b></label>
+                <input type="password" name="Password" placeholder="Enter your Password" id="pass"/>
+                <label for="name"><b></b></label>
+                <input type="button" class="btn btn-dark" value="Submit" width="100%" onclick="login()"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

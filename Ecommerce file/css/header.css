@@ -1,0 +1,87 @@
+         *{
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            box-sizing: border-box;
+        }
+        .header{
+            background-color: #020b14 ;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 0px 25px;
+            height: 80px;
+            align-items: center;
+        }
+        .search{
+            height: 35px;
+            width: 500px;
+            background: #060606;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            background: #ffffff;
+            width: 600px;
+            height: 35px;
+            display: flex;
+        }
+        form input{
+            border: none;
+            outline: none;
+        }
+        form button{
+            background: gray;
+            padding: 10px 50px;
+            margin-left: 200px;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+       
+        .icons .fa{
+            color: white;
+            padding:0px 50px;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .links a{
+            text-decoration: none;
+            padding: 15px;
+            color: black;
+            font-size: 20px;
+        }
+        
+        li{
+            list-style-type: none;
+            display: inline;
+        }
+
+
+        @media only screen and (max-width:600px){
+            .header{
+                grid-template-columns: auto auto;
+                padding: 10px 5px;
+                height: auto;
+            }
+            .search{
+                grid-column: 2;
+                grid-row: 2;
+                grid-column: 1/span 2;
+            }
+            .icons{
+                grid-column: 3;
+                grid-row: 3;
+                grid-column: 1/span 2;
+            }
+        }
+        #but{
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        #cart{
+             margin-left: 20px;
+            margin-bottom: 10px;
+        }
